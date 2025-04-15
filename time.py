@@ -19,6 +19,8 @@ py_accettato = {'data': [{'anno_stagione': '2024 P/E',
            'tot_capi': 1}]
            }
 
+def saluta():
+    print("Ciao, sono un modulo di esempio!")
 
 #controllo se all'interno del payload corretto ho come primo livello 'data', al suo interno abbia 'items' e 'natura_movimento'
 def controllo_struttura_payload(payload):
@@ -33,7 +35,7 @@ def controllo_struttura_payload(payload):
     out = {'data': payload,
            'errors': None}
     
-    #uau
+    
     
     if not isinstance(payload, dict) or 'data' not in payload:
         """ return "Tipo struttura non valido o chiave 'data' obbligatoria" """
